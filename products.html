@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chayra Bakery - Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand fs-4" style="font-family: 'Brush Script MT', cursive, sans-serif;" href="index.html">Chayra Bakery</a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="products.html">Products</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                🛒 <span class="badge bg-danger rounded-pill" id="cart-badge">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <section id="products-katalog">
+            <div class="text-center mb-5">
+                <h2>Our Signature Collections</h2>
+                <p class="text-muted">A curated selection of our finest creations</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                
+                <div class="col-md-10">
+                    <div class="card card-custom p-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="img/gambar-signature-cupcake.png" class="img-fluid rounded-4 shadow-sm">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Signature Cupcake</h3>
+                                <h4 class="h6 mt-2 text-warning">Flavor Selection:</h4>
+                                <ul class="small mb-4 text-white-50">
+                                    <li>Vanilla Dream</li>
+                                    <li>Chocolate Bliss</li>
+                                    <li>Strawberry Swirl</li>
+                                    <li>Red Velvet Cupcake</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                    <span>Rp20.000</span>
+                                    <button class="btn btn-light text-dark fw-bold btn-add-to-cart" id="add-cupcake" data-name="Signature Cupcake" data-price="20000" data-flavors="Vanilla Dream,Chocolate Bliss,Strawberry Swirl,Red Velvet Cupcake">🛒 Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <div class="card card-custom p-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="img/gambar-birthday-cake.png" class="img-fluid rounded-4 shadow-sm">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Birthday Cake</h3>
+                                <h4 class="h6 mt-2 text-warning">Flavor Selection:</h4>
+                                <ul class="small mb-4 text-white-50">
+                                    <li>Chocolate Fudge Cake</li>
+                                    <li>Vanilla Celebration</li>
+                                    <li>Cookies & Cream</li>
+                                    <li>Lemon Butter Cake</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                    <span>Rp250.000</span>
+                                    <button class="btn btn-light text-dark fw-bold btn-add-to-cart" id="add-birthday" data-name="Birthday Cake" data-price="250000" data-flavors="Chocolate Fudge Cake,Vanilla Celebration,Cookies & Cream,Lemon Butter Cake">🛒 Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-10">
+                    <div class="card card-custom p-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-4 text-center">
+                                <img src="img/gambar-special-cakes.png" class="img-fluid rounded-4 shadow-sm">
+                            </div>
+                            <div class="col-md-8">
+                                <h3>Chayra Special Cakes</h3>
+                                <h4 class="h6 mt-2 text-warning">Flavor Selection:</h4>
+                                <ul class="small mb-4 text-white-50">
+                                    <li>Blush Velvet Cake</li>
+                                    <li>Royal Chocolate Cake</li>
+                                    <li>Lemon Meringue Cake</li>
+                                    <li>Classic Vanilla Bourbon</li>
+                                </ul>
+                                <div class="d-flex justify-content-between align-items-center border-top pt-3">
+                                    <span>Rp350.000</span>
+                                    <button class="btn btn-light text-dark fw-bold btn-add-to-cart" id="add-special" data-name="Chayra Special Cakes" data-price="350000" data-flavors="Blush Velvet Cake,Royal Chocolate Cake,Lemon Meringue Cake,Classic Vanilla Bourbon">🛒 Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-4 text-center">
+        <p class="mb-0">&copy; 2026 Chayra Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* style.css */
+:root {
+    --primary-pink: #FCE4EC;   /* Latar belakang pink pastel dominan */
+    --accent-pink: #F8BBD0;    /* Pink untuk hover / navbar active */
+    --cream-light: #FFF9C4;    /* Warna krem lembut pada section alternatif */
+    --dark-brown: #6D4C41;     /* Warna cokelat tua untuk kartu dan tombol */
+    --text-dark: #3E2723;      /* Warna teks utama cokelat gelap */
+}
+
+body {
+    background-color: var(--primary-pink);
+    color: var(--text-dark);
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: var(--primary-pink) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.navbar-brand, .nav-link {
+    color: var(--text-dark) !important;
+    font-weight: 500;
+}
+.nav-link.active {
+    border-bottom: 2px solid var(--dark-brown);
+}
+
+/* Background Section Alternatif (Krem) */
+.bg-cream {
+    background-color: #FFFDF6 !important;
+}
+
+/* Button Customization */
+.btn-primary {
+    background-color: var(--dark-brown) !important;
+    border-color: var(--dark-brown) !important;
+    color: #fff !important;
+    padding: 10px 24px;
+    border-radius: 8px;
+}
+.btn-primary:hover {
+    background-color: var(--text-dark) !important;
+    border-color: var(--text-dark) !important;
+}
+
+/* Card Customization (Cokelat sesuai Gambar 2 & 3) */
+.card-custom {
+    background-color: var(--dark-brown) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 15px !important;
+    overflow: hidden;
+    height: 100%;
+}
+.card-custom th, .card-custom td {
+    color: #ffffff !important;
+}
+
+/* Tagline & Typography */
+h1, h2, h3, h4 {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.card-custom h2, .card-custom h3, .card-custom h4, .card-custom p {
+    color: #ffffff !important;
+}
+
+/* Quantity Control Styling di Cart */
+.quantity-control {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 2px 8px;
+}
+.quantity-control button {
+    background: none;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 2px 8px;
+}
+
+/* Footer Customization */
+footer {
+    background-color: var(--primary-pink);
+    border-top: 1px solid rgba(0,0,0,0.05);
+    color: var(--text-dark);
+}
+
+/* Styling Kustom untuk Menyelaraskan Hero Section sesuai Dokumen Rancangan */
+
+/* 1. Memastikan wadah teks welcome & tagline mengambil lebar penuh agar teks-align center bekerja sempurna */
+.hero-text-center-wrapper {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* 2. Mengunci posisi tombol See Products agar tetap konsisten merapat di kiri bawah */
+.hero-button-left-bottom {
+    text-align: left !important;
+    display: block;
+}
+
+/* 3. Mengunci posisi container gambar agar merapat rapat di sisi kanan bawah */
+.hero-image-right-bottom {
+    text-align: right !important;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Pengecekan responsivitas: Saat dibuka di handphone (layar kecil), tata letak otomatis kembali normal/tengah agar rapi */
+@media (max-width: 767.98px) {
+    .hero-button-left-bottom {
+        text-align: center !important;
+        margin-bottom: 2rem;
+    }
+    .hero-image-right-bottom {
+        text-align: center !important;
+    }
+}

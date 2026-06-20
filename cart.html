@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chayra Bakery - Shopping Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container">
+                <a class="navbar-brand fs-4" style="font-family: 'Brush Script MT', cursive, sans-serif;" href="index.html">Chayra Bakery</a>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="cart.html">
+                                🛒 <span class="badge bg-danger rounded-pill" id="cart-badge">0</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container py-5">
+        <h2 class="mb-4">🛒 Shopping Cart</h2>
+        
+        <div class="row g-4">
+            <div class="col-md-8">
+                <div class="table-responsive bg-white rounded-3 shadow-sm p-3">
+                    <table class="table table-bordered align-middle mb-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Products</th>
+                                <th>Price</th>
+                                <th>Qty</th>
+                                <th>Subtotal</th>
+                                <th class="text-center" style="width: 50px;">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items"></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                
+                <div class="card card-custom p-3 mb-3" style="max-height: 185px;">
+                    <h5 class="border-bottom pb-1 mb-2 fs-6">Order Summary</h5>
+                    <div class="d-flex justify-content-between mb-1 small">
+                        <span>Subtotal</span>
+                        <span id="summary-subtotal">Rp0</span>
+                    </div>
+                    <div class="d-flex justify-content-between mb-1 small">
+                        <span>Delivery Fee</span>
+                        <span id="summary-delivery">Rp0</span>
+                    </div>
+                    <hr class="my-2">
+                    <div class="d-flex justify-content-between fw-bold fs-6">
+                        <span>Total</span>
+                        <strong id="summary-total">Rp0</strong>
+                    </div>
+                </div>
+
+                <div class="card bg-white text-dark p-4 shadow-sm">
+                    <h4 class="h5 border-bottom pb-2 mb-3 text-dark">Delivery Information</h4>
+                    <form id="delivery-form">
+                        <div class="mb-3">
+                            <label class="form-label small">Recipient's Name *</label>
+                            <input type="text" id="input-name" class="form-control" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Phone Number *</label>
+                            <input type="tel" id="input-phone" class="form-control" placeholder="08**********" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Delivery Date & Time *</label>
+                            <input type="datetime-local" id="input-datetime" class="form-control" required>
+                            <input type="text" class="form-control form-control-sm mt-1 bg-light" value=" operating hours: 08:00 am - 08:00 pm" readonly style="font-size: 11px;">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Delivery Address *</label>
+                            <textarea id="input-address" class="form-control" rows="2" placeholder="Enter Your Full Address" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Payment Method *</label>
+                            <select id="input-payment" class="form-select">
+                                <option value="E-Wallet">E-Wallet</option>
+                                <option value="Bank Transfer">Bank Transfer</option>
+                                <option value="COD">COD (Cash on delivery)</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small">Notes</label>
+                            <textarea id="input-notes" class="form-control" rows="2" placeholder="Enter Additional Notes...."></textarea>
+                        </div>
+                        <button type="submit" class="button type= btn btn-primary w-100 mt-2">Confirm Order</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-4 text-center">
+        <p class="mb-0">&copy; 2026 Chayra Bakery. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
